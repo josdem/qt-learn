@@ -23,7 +23,8 @@ Rectangle {
 
   Grid {
     id: colorPicker
-    x: 4; anchors.bottom: page.bottom; anchors.bottomMargin: 4
+    anchors.horizontalCenter: page.horizontalCenter
+    anchors.bottom: page.bottom; anchors.bottomMargin: 4
     rows: 2; columns: 3; spacing: 3
 
     Cell { cellColor: "red"; onClicked: label.color = cellColor, label.text = "Red", image.source = "http://localhost:1313/img/qt/apple.jpg" }
