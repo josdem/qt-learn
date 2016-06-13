@@ -7,7 +7,7 @@ Rectangle {
 
   Text {
     id: label
-    text: "Apple"
+    text: "Red"
     color: "red"
     y: 30
     anchors.horizontalCenter: page.horizontalCenter
@@ -26,11 +26,11 @@ Rectangle {
     x: 4; anchors.bottom: page.bottom; anchors.bottomMargin: 4
     rows: 2; columns: 3; spacing: 3
 
-    Cell { cellColor: "red"; onClicked: label.color = cellColor, label.text = "Apple", image.source = "http://localhost:1313/img/qt/apple.jpg" }
-    Cell { cellColor: "green"; onClicked: label.color = cellColor, label.text = "Lime", image.source = "http://localhost:1313/img/qt/lime.jpg" }
-    Cell { cellColor: "blue"; onClicked: label.color = cellColor, label.text = "Sea", image.source = "http://localhost:1313/img/qt/sea.jpg" }
-    Cell { cellColor: "yellow"; onClicked: label.color = cellColor, label.text = "Chick", image.source = "http://localhost:1313/img/qt/chick.jpg" }
-    Cell { cellColor: "steelblue"; onClicked: label.color = cellColor }
-    Cell { cellColor: "black"; onClicked: label.color = cellColor }
+    Cell { cellColor: "red"; onClicked: label.color = cellColor, label.text = "Red", image.source = "http://localhost:1313/img/qt/apple.jpg" }
+    Cell { cellColor: "green"; onClicked: label.color = cellColor, label.text = "Green", image.source = "http://localhost:1313/img/qt/lime.jpg" }
+    Cell { cellColor: "blue"; onClicked: label.color = cellColor, label.text = "Blue", image.source = "http://localhost:1313/img/qt/sea.jpg" }
+    Cell { cellColor: "yellow"; onClicked: label.color = cellColor, label.text = "Yellow", image.source = "http://localhost:1313/img/qt/chick.jpg" }
+    Cell { cellColor: "orange"; onClicked: label.color = cellColor, label.text = "Orange", image.source = "http://localhost:1313/img/qt/orange.jpg" }
+    Cell { cellColor: "brown"; onClicked: label.color = cellColor, label.text = "Brown", image.source = "http://localhost:1313/img/qt/brown.jpg"}
   }
 }
