@@ -1,10 +1,14 @@
 import QtQuick 2.0
 import QtMultimedia 5.6
 
+
 Rectangle {
   id: page
   width: 320; height: 480
   color: "white"
+
+  property var imageUrl : "http://localhost:1313/img/qt/"
+  property var audioUrl : "http://localhost:1313/sounds/qt/"
 
   Text {
     id: label
@@ -19,12 +23,12 @@ Rectangle {
     id: image
     y: 80
     anchors.horizontalCenter: page.horizontalCenter
-    source: "http://localhost:1313/img/qt/apple.jpg"
+    source: imageUrl + "apple.jpg"
   }
 
   Audio {
     id: audio
-    source: "http://localhost:1313/sounds/qt/red.wav"
+    source: audioUrl + "red.wav"
   }
 
   Grid {
@@ -37,48 +41,48 @@ Rectangle {
       cellColor: "red";
       onClicked: label.color = cellColor,
       label.text = "Red",
-      image.source = "http://localhost:1313/img/qt/apple.jpg",
-      audio.source = "http://localhost:1313/sounds/qt/red.wav",
+      image.source = imageUrl + "apple.jpg",
+      audio.source = audioUrl + "red.wav",
       audio.play()
     }
     Cell {
       cellColor: "green";
       onClicked: label.color = cellColor,
       label.text = "Green",
-      image.source = "http://localhost:1313/img/qt/lime.jpg",
-      audio.source = "http://localhost:1313/sounds/qt/green.wav",
+      image.source = imageUrl + "lime.jpg",
+      audio.source = audioUrl + "green.wav",
       audio.play()
     }
     Cell {
       cellColor: "blue";
       onClicked: label.color = cellColor,
       label.text = "Blue",
-      image.source = "http://localhost:1313/img/qt/sea.jpg",
-      audio.source = "http://localhost:1313/sounds/qt/blue.wav",
+      image.source = imageUrl + "sea.jpg",
+      audio.source = audioUrl + "blue.wav",
       audio.play()
     }
     Cell {
       cellColor: "yellow";
       onClicked: label.color = cellColor,
       label.text = "Yellow",
-      image.source = "http://localhost:1313/img/qt/chick.jpg",
-      audio.source = "http://localhost:1313/sounds/qt/yellow.wav",
+      image.source = imageUrl + "chick.jpg",
+      audio.source = audioUrl + "yellow.wav",
       audio.play()
     }
     Cell {
       cellColor: "orange";
       onClicked: label.color = cellColor,
       label.text = "Orange",
-      image.source = "http://localhost:1313/img/qt/orange.jpg",
-      audio.source = "http://localhost:1313/sounds/qt/orange.wav",
+      image.source = imageUrl + "orange.jpg",
+      audio.source = audioUrl + "orange.wav",
       audio.play()
     }
     Cell {
       cellColor: "brown";
       onClicked: label.color = cellColor,
       label.text = "Brown",
-      image.source = "http://localhost:1313/img/qt/brown.jpg",
-      audio.source = "http://localhost:1313/sounds/qt/brown.wav",
+      image.source = imageUrl + "brown.jpg",
+      audio.source = audioUrl + "brown.wav",
       audio.play()
     }
   }
