@@ -1,4 +1,5 @@
 import QtQuick 2.0
+import QtMultimedia 5.6
 
 Rectangle {
   id: page
@@ -21,13 +22,18 @@ Rectangle {
     source: "http://localhost:1313/img/qt/apple.jpg"
   }
 
+  Audio {
+    id: playSound
+    source: "http://localhost:1313/sounds/qt/red.wav"
+  }
+
   Grid {
     id: colorPicker
     anchors.horizontalCenter: page.horizontalCenter
     anchors.bottom: page.bottom; anchors.bottomMargin: 4
     rows: 2; columns: 3; spacing: 3
 
-    Cell { cellColor: "red"; onClicked: label.color = cellColor, label.text = "Red", image.source = "http://localhost:1313/img/qt/apple.jpg" }
+    Cell { cellColor: "red"; onClicked: label.color = cellColor, label.text = "Red", image.source = "http://localhost:1313/img/qt/apple.jpg", playSound.play() }
     Cell { cellColor: "green"; onClicked: label.color = cellColor, label.text = "Green", image.source = "http://localhost:1313/img/qt/lime.jpg" }
     Cell { cellColor: "blue"; onClicked: label.color = cellColor, label.text = "Blue", image.source = "http://localhost:1313/img/qt/sea.jpg" }
     Cell { cellColor: "yellow"; onClicked: label.color = cellColor, label.text = "Yellow", image.source = "http://localhost:1313/img/qt/chick.jpg" }
