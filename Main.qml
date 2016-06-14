@@ -23,7 +23,7 @@ Rectangle {
   }
 
   Audio {
-    id: playSound
+    id: audio
     source: "http://localhost:1313/sounds/qt/red.wav"
   }
 
@@ -33,11 +33,53 @@ Rectangle {
     anchors.bottom: page.bottom; anchors.bottomMargin: 4
     rows: 2; columns: 3; spacing: 3
 
-    Cell { cellColor: "red"; onClicked: label.color = cellColor, label.text = "Red", image.source = "http://localhost:1313/img/qt/apple.jpg", playSound.play() }
-    Cell { cellColor: "green"; onClicked: label.color = cellColor, label.text = "Green", image.source = "http://localhost:1313/img/qt/lime.jpg" }
-    Cell { cellColor: "blue"; onClicked: label.color = cellColor, label.text = "Blue", image.source = "http://localhost:1313/img/qt/sea.jpg" }
-    Cell { cellColor: "yellow"; onClicked: label.color = cellColor, label.text = "Yellow", image.source = "http://localhost:1313/img/qt/chick.jpg" }
-    Cell { cellColor: "orange"; onClicked: label.color = cellColor, label.text = "Orange", image.source = "http://localhost:1313/img/qt/orange.jpg" }
-    Cell { cellColor: "brown"; onClicked: label.color = cellColor, label.text = "Brown", image.source = "http://localhost:1313/img/qt/brown.jpg"}
+    Cell {
+      cellColor: "red";
+      onClicked: label.color = cellColor,
+      label.text = "Red",
+      image.source = "http://localhost:1313/img/qt/apple.jpg",
+      audio.source = "http://localhost:1313/sounds/qt/red.wav",
+      audio.play()
+    }
+    Cell {
+      cellColor: "green";
+      onClicked: label.color = cellColor,
+      label.text = "Green",
+      image.source = "http://localhost:1313/img/qt/lime.jpg",
+      audio.source = "http://localhost:1313/sounds/qt/green.wav",
+      audio.play()
+    }
+    Cell {
+      cellColor: "blue";
+      onClicked: label.color = cellColor,
+      label.text = "Blue",
+      image.source = "http://localhost:1313/img/qt/sea.jpg",
+      audio.source = "http://localhost:1313/sounds/qt/blue.wav",
+      audio.play()
+    }
+    Cell {
+      cellColor: "yellow";
+      onClicked: label.color = cellColor,
+      label.text = "Yellow",
+      image.source = "http://localhost:1313/img/qt/chick.jpg",
+      audio.source = "http://localhost:1313/sounds/qt/yellow.wav",
+      audio.play()
+    }
+    Cell {
+      cellColor: "orange";
+      onClicked: label.color = cellColor,
+      label.text = "Orange",
+      image.source = "http://localhost:1313/img/qt/orange.jpg",
+      audio.source = "http://localhost:1313/sounds/qt/orange.wav",
+      audio.play()
+    }
+    Cell {
+      cellColor: "brown";
+      onClicked: label.color = cellColor,
+      label.text = "Brown",
+      image.source = "http://localhost:1313/img/qt/brown.jpg",
+      audio.source = "http://localhost:1313/sounds/qt/brown.wav",
+      audio.play()
+    }
   }
 }
